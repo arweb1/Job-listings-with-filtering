@@ -9,4 +9,4 @@ const positionReducer = (state = [], actions) => {
     }
 }
 
-export default positionReducer
+export default positionReducer;

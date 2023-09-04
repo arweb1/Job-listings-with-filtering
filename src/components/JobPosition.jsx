@@ -66,7 +66,7 @@ const JobPosition = ({
         <Stack>
           {badges.map(item => (
             <Badge 
-              onClick={handleAddFilter}
+              onClick={() => handleAddFilter(item)}
               key={item}
             >{item}</Badge>
           ))}

@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import {ReactComponent as Remove} from '../assets/images/icon-remove.svg';
+import { useDispatch } from 'react-redux';
+import { removeFilter } from 'store/filters/filter-actions';
 
 const Badge = ({
   variant = 'basic',
@@ -7,6 +9,7 @@ const Badge = ({
   children,
   onClear,
   onClick,
+  
 }) => (
   <div className={`badge badge--${variant} badge--${colorScheme}`} onClick={onClick}>
     <span>
@@ -14,7 +17,7 @@ const Badge = ({
     </span>
     {variant === 'clearable' && (
       <div className='badge-remover' onClick={onClear}>
-        <Remove />
+        <Remove/>
       </div>
     )}
   </div>
